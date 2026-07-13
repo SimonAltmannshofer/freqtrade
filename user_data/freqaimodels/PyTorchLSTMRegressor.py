@@ -9,7 +9,7 @@ from freqtrade.freqai.torch.PyTorchDataConvertor import (
     PyTorchDataConvertor,
 )
 from freqtrade.freqai.torch.PyTorchLSTMModel import PyTorchLSTMModel
-from freqtrade.freqai.torch.PyTorchModelTrainer import PyTorchLSTMTrainer
+from freqtrade.freqai.torch.PyTorchModelTrainer import PyTorchModelTrainer
 
 
 class PyTorchLSTMRegressor(BasePyTorchRegressor):
@@ -52,7 +52,7 @@ class PyTorchLSTMRegressor(BasePyTorchRegressor):
         criterion = torch.nn.MSELoss(reduction="mean")
         trainer = self.get_init_model(dk.pair)
         if trainer is None:
-            trainer = PyTorchLSTMTrainer(
+            trainer = PyTorchModelTrainer(
                 model=model,
                 optimizer=optimizer,
                 criterion=criterion,
