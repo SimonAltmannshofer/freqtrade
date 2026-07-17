@@ -18,7 +18,7 @@ user_data/plot/*
 !user_data/strategy/sample_strategy.py
 !user_data/notebooks
 !user_data/models
-!user_data/freqaimodels
+#!user_data/freqaimodels
 #user_data/freqaimodels/*
 user_data/models/*
 user_data/notebooks/*
