@@ -228,6 +228,10 @@ class PyTorchModelTrainer(PyTorchTrainerInterface):
         return self
 
 
+class PyTorchLSTMTrainer(PyTorchModelTrainer):
+    """Backward-compatible trainer alias for LSTM-based PyTorch models."""
+
+
 class PyTorchTransformerTrainer(PyTorchModelTrainer):
     """
     Creating a trainer for the Transformer model.
